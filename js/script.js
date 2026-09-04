@@ -1,3 +1,4 @@
+emailjs.init("BVz1L4t2UX6qAelHq");
 // Mobile menu
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
@@ -95,3 +96,26 @@ runCounters();
 
 // Lucide
 lucide.createIcons();
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    emailjs.sendForm(
+        "service_dn6pxuq",
+        "template_78v4kol",
+        this
+    ).then(()=>{
+
+        alert("Quotation request sent successfully!");
+
+        form.reset();
+
+    }).catch(()=>{
+
+        alert("Something went wrong. Please try again.");
+
+    });
+
+});
