@@ -157,8 +157,20 @@ body{
 }
 
 .icon{
-    font-size:2rem;
+    width:64px;
+    height:64px;
+    background:#F4B400;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
     margin-bottom:20px;
+}
+
+.icon svg{
+    width:30px;
+    height:30px;
+    color:#111;
 }
 
 .card h3{
