@@ -314,3 +314,95 @@ footer{
     padding:25px;
     font-size:.9rem;
 }
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    transition:.35s ease;
+    background:rgba(10,10,10,.25);
+    backdrop-filter:blur(8px);
+}
+
+.navbar.scrolled{
+    background:#ffffff;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.navbar.scrolled .nav-links a{
+    color:#111;
+}
+
+.nav-links a{
+    color:white;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#F4B400;
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+/* ---------- NAVBAR ---------- */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    transition:.35s ease;
+    background:rgba(10,10,10,.25);
+    backdrop-filter:blur(8px);
+}
+
+.navbar.scrolled{
+    background:#ffffff;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.navbar.scrolled .nav-links a{
+    color:#111;
+}
+
+.nav-links a{
+    color:white;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#F4B400;
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+/* ---------- REVEAL ---------- */
+
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
