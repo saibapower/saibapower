@@ -12,6 +12,11 @@ body{
     color:#222;
 }
 
+:root{
+    --navbar-background:#080808;
+    --navbar-scrolled-background:#0C74AD;
+}
+
 .navbar{
     position:fixed;
     width:100%;
@@ -19,7 +24,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(0, 0, 0, 0.534);
+    background:var(--navbar-background);
     backdrop-filter:blur(10px);
 }
 
@@ -343,12 +348,12 @@ footer{
 }
 
 .navbar.scrolled{
-    background:#ffffff;
+    background:var(--navbar-scrolled-background);
     box-shadow:0 8px 30px rgba(0,0,0,.08);
 }
 
 .navbar.scrolled .nav-links a{
-    color:#111;
+    color:white;
 }
 
 .nav-links a{
@@ -383,12 +388,12 @@ footer{
 }
 
 .navbar.scrolled{
-    background:#ffffff;
+    background:var(--navbar-scrolled-background);
     box-shadow:0 8px 30px rgba(0,0,0,.08);
 }
 
 .navbar.scrolled .nav-links a{
-    color:#111;
+    color:white;
 }
 
 .nav-links a{
@@ -417,4 +422,95 @@ footer{
 .reveal.active{
     opacity:1;
     transform:translateY(0);
+}
+/* ---------- STATS ---------- */
+
+.stats{
+    background:#0C74AD;
+    color:white;
+    padding:70px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    text-align:center;
+    gap:30px;
+}
+
+.stat h2{
+    font-size:3rem;
+    color:#F4B400;
+}
+
+.stat p{
+    margin-top:10px;
+    letter-spacing:1px;
+}
+/* ---------- WHATSAPP ---------- */
+
+.whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    box-shadow:0 12px 25px rgba(0,0,0,.25);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp svg{
+    width:30px;
+    height:30px;
+}
+/* ---------- CONTACT FORM ---------- */
+
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:start;
+}
+
+#contact-form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+#contact-form input,
+#contact-form textarea{
+
+padding:16px;
+border:none;
+border-radius:10px;
+font-family:Poppins;
+font-size:15px;
+}
+
+#contact-form textarea{
+height:160px;
+resize:none;
+}
+
+@media(max-width:900px){
+
+.contact-wrapper{
+grid-template-columns:1fr;
+}
+
+}
+.map iframe{
+width:100%;
+height:350px;
+border:none;
+display:block;
 }

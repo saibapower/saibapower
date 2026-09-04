@@ -2,43 +2,96 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+menuBtn.addEventListener("click",()=>{
+navLinks.classList.toggle("active");
 });
 
-// Navbar scroll effect
-const navbar = document.getElementById("navbar");
+// Navbar
+const navbar=document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-    if(window.scrollY > 80){
-        navbar.classList.add("scrolled");
-    }else{
-        navbar.classList.remove("scrolled");
-    }
+navbar.classList.toggle("scrolled",window.scrollY>60);
+
+revealSections();
 
 });
 
-// Scroll reveal
-const reveals = document.querySelectorAll(".reveal");
+// Reveal animation
+const reveals=document.querySelectorAll(".reveal");
 
 function revealSections(){
 
-    reveals.forEach(section => {
+reveals.forEach(section=>{
 
-        const top = section.getBoundingClientRect().top;
-        const trigger = window.innerHeight - 120;
+const trigger=window.innerHeight-120;
 
-        if(top < trigger){
-            section.classList.add("active");
-        }
+if(section.getBoundingClientRect().top<trigger){
 
-    });
+section.classList.add("active");
 
 }
 
-window.addEventListener("scroll", revealSections);
+});
+
+}
+
 revealSections();
 
-// Initialize Lucide icons
+// Animated counters
+const counters=document.querySelectorAll(".counter");
+
+let started=false;
+
+function runCounters(){
+
+const stats=document.querySelector(".stats");
+
+if(!stats)return;
+
+const trigger=window.innerHeight-100;
+
+if(stats.getBoundingClientRect().top<trigger && !started){
+
+started=true;
+
+counters.forEach(counter=>{
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const speed=target/80;
+
+const update=()=>{
+
+count+=speed;
+
+if(count<target){
+
+counter.innerText=Math.ceil(count);
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target+"+";
+
+}
+
+};
+
+update();
+
+});
+
+}
+
+}
+
+window.addEventListener("scroll",runCounters);
+
+runCounters();
+
+// Lucide
 lucide.createIcons();
