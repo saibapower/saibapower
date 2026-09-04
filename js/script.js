@@ -97,25 +97,27 @@ runCounters();
 // Lucide
 lucide.createIcons();
 const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function(e){
-
+const templateParams = {
+  name: "John Doe",
+  email: "johndoe@example.com",
+  phone: "+1234567890",
+  subject: "Project Inquiry",
+  message: "Hello, I would like to talk about a new project."
+};
+form.addEventListener("submit", function (e) {
     e.preventDefault();
 
     emailjs.sendForm(
         "service_dn6pxuq",
-        "template_78v4kol",
+        "template_n4vpcsv",
         this
-    ).then(()=>{
-
+    )
+    .then(() => {
         alert("Quotation request sent successfully!");
-
         form.reset();
-
-    }).catch(()=>{
-
-        alert("Something went wrong. Please try again.");
-
+    })
+    .catch((error) => {
+        console.error(error);
+        alert("Error: " + JSON.stringify(error));
     });
-
 });
