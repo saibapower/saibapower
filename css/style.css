@@ -1,3 +1,16 @@
+:root{
+
+    --primary:#0A84C6;
+
+    --accent:#F4B400;
+
+    --dark:#111111;
+
+    --text:#444444;
+
+    --light:#F8F9FB;
+
+}
 *{
     margin:0;
     padding:0;
@@ -6,15 +19,18 @@
 html{
     scroll-behavior:smooth;
 }
+
 body{
     font-family:'Poppins', sans-serif;
     background:#fff;
     color:#222;
+    line-height:1.7;
 }
 
 :root{
     --navbar-background:#080808;
     --navbar-scrolled-background:#0C74AD;
+    --section-spacing:120px;
 }
 
 .navbar{
@@ -67,9 +83,10 @@ body{
 }
 
 .hero h1{
-    font-size:3.6rem;
-    line-height:1.1;
-    margin-bottom:20px;
+    font-size:clamp(2.5rem, 5vw, 4.5rem);
+    line-height:1.05;
+    font-weight:800;
+    letter-spacing:-1px;
 }
 
 .subtitle{
@@ -123,7 +140,7 @@ body{
 /* SERVICES */
 
 .services{
-    padding:90px 8%;
+    padding:var(--section-spacing) 8%;
     background:#f8f9fb;
 }
 
@@ -139,8 +156,8 @@ body{
 }
 
 .section-title h2{
-    font-size:2.3rem;
-    margin-top:10px;
+    font-size:clamp(2rem,4vw,3rem);
+    font-weight:700;
 }
 
 .service-grid{
@@ -204,7 +221,7 @@ body{
     color:#ccc;
 }
 .about{
-    padding:100px 8%;
+    padding:var(--section-spacing) 8%;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
@@ -253,7 +270,7 @@ body{
 /* PROJECTS */
 
 .projects{
-    padding:100px 8%;
+    padding:var(--section-spacing) 8%;
     background:#f8f9fb;
 }
 
@@ -295,7 +312,7 @@ body{
 }/* CONTACT */
 
 .contact{
-    padding:100px 8%;
+    padding:var(--section-spacing) 8%;
     background:#111;
     color:white;
 }
@@ -565,4 +582,8 @@ resize:none;
     .features{
         grid-template-columns: 1fr;
     }
+}
+.logo-link{
+    display:flex;
+    align-items:center;
 }

@@ -121,3 +121,26 @@ form.addEventListener("submit", function (e) {
         alert("Error: " + JSON.stringify(error));
     });
 });
+const sliders = document.querySelectorAll(".project-slider");
+
+sliders.forEach(slider => {
+
+    const images = JSON.parse(
+        slider.dataset.images
+    );
+
+    let current = 0;
+
+    setInterval(() => {
+
+        current++;
+
+        if(current >= images.length){
+            current = 0;
+        }
+
+        slider.src = images[current];
+
+    }, 3000);
+
+});
