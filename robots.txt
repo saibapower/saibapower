@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://saibapower.co.ke/sitemap.xml
+Sitemap: https://saibapower.pages.dev/sitemap.xml
+
