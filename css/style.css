@@ -61,17 +61,20 @@ body{
 }
 
 .hero{
-    height:100vh;
+    min-height:100vh;
     background:
         linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
-        url('../images/hero.jpg') center/cover;
+        url('../images/hero.jpg');
+    background-size:cover;
+    background-position:center;
     display:flex;
     align-items:center;
-    padding:0 8%;
+    padding:90px 8% 60px;
 }
 
 .hero-content{
     max-width:650px;
+    width:100%;
     color:white;
 }
 
