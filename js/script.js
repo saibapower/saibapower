@@ -174,3 +174,138 @@ link.classList.add("current");
 });
 
 });
+const services = {
+    electrical: [
+        "images/electrical/1.jpg",
+        "images/electrical/2.jpg",
+        "images/electrical/3.jpg",
+        "images/electrical/4.jpg",
+        "images/electrical/5.jpg"
+    ],
+
+    cabling: [
+        "images/cabling/1.jpg",
+        "images/cabling/2.jpg",
+        "images/cabling/3.jpg",
+        "images/cabling/4.jpg",
+        "images/cabling/5.jpg"
+    ],
+
+    security: [
+        "images/security/1.jpg",
+        "images/security/2.jpg",
+        "images/security/3.jpg",
+        "images/security/4.jpg",
+        "images/security/5.jpg"
+    ],
+
+    fence: [
+        "images/fence/1.jpg",
+        "images/fence/2.jpg",
+        "images/fence/3.jpg",
+        "images/fence/4.jpg",
+        "images/fence/5.jpg"
+    ],
+
+    wireless: [
+        "images/wireless/1.jpg",
+        "images/wireless/2.jpg",
+        "images/wireless/3.jpg",
+        "images/wireless/4.jpg",
+        "images/wireless/5.jpg"
+    ]
+};
+
+let currentService = "electrical";
+let currentImage = 0;
+
+const galleryImage = document.getElementById("galleryImage");
+const dotsContainer = document.getElementById("galleryDots");
+
+function loadGallery(){
+
+    galleryImage.src =
+        services[currentService][currentImage];
+
+    dotsContainer.innerHTML = "";
+
+    services[currentService].forEach((_, index)=>{
+
+        const dot = document.createElement("div");
+
+        dot.classList.add("dot");
+
+        if(index === currentImage){
+            dot.classList.add("active");
+        }
+
+        dot.addEventListener("click", ()=>{
+
+            currentImage = index;
+
+            loadGallery();
+
+        });
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+}
+
+document.querySelectorAll(".tab").forEach(tab=>{
+
+    tab.addEventListener("click", ()=>{
+
+        document
+            .querySelectorAll(".tab")
+            .forEach(t=>t.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        currentService =
+            tab.dataset.service;
+
+        currentImage = 0;
+
+        loadGallery();
+
+    });
+
+});
+
+document
+.getElementById("nextBtn")
+.addEventListener("click", ()=>{
+
+    currentImage++;
+
+    if(
+        currentImage >=
+        services[currentService].length
+    ){
+        currentImage = 0;
+    }
+
+    loadGallery();
+
+});
+
+document
+.getElementById("prevBtn")
+.addEventListener("click", ()=>{
+
+    currentImage--;
+
+    if(currentImage < 0){
+
+        currentImage =
+        services[currentService].length - 1;
+
+    }
+
+    loadGallery();
+
+});
+
+loadGallery();

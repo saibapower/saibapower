@@ -304,49 +304,92 @@ body{
 .icon{
     font-size: 2.3rem;
 }
-/* PROJECTS */
 
-.projects{
-    padding:var(--section-spacing) 8%;
-    background:#f8f9fb;
+/* ---------- PORTFOLIO ---------- */
+
+.portfolio{
+    padding:var(--section) 8%;
+    background:var(--surface);
 }
 
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.project{
-    position:relative;
-    overflow:hidden;
-    border-radius:15px;
-    height:260px;
-}
-
-.project img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.4s;
-}
-
-.overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to top, rgba(0,0,0,.75), transparent);
+.portfolio-tabs{
     display:flex;
-    align-items:flex-end;
-    padding:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin:40px 0;
 }
 
-.overlay h3{
+.tab{
+    padding:12px 24px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:white;
+    font-weight:600;
+    transition:.3s;
+}
+
+.tab.active{
+    background:var(--primary);
     color:white;
 }
 
-.project:hover img{
-    transform:scale(1.08);
-}/* CONTACT */
+.gallery-container{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.gallery-container img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:18px;
+}
+
+.gallery-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    cursor:pointer;
+    font-size:22px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+#prevBtn{
+    left:20px;
+}
+
+#nextBtn{
+    right:20px;
+}
+
+.gallery-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#d1d5db;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:var(--primary);
+}
+
+/* CONTACT */
 
 .contact{
     padding:var(--section-spacing) 8%;

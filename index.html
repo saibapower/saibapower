@@ -196,95 +196,55 @@ content="Professional electrical installations, structured cabling, CCTV, electr
 
 </section>
 
-<section class="projects reveal" id="projects">
+<section class="portfolio reveal" id="projects">
 
     <div class="section-title">
         <p>OUR PROJECTS</p>
         <h2>Recent Installations</h2>
     </div>
 
-    <div class="project-grid">
+    <div class="portfolio-tabs">
 
-        <div class="project">
+        <button class="tab active" data-service="electrical">
+            Electrical
+        </button>
 
-            <img
-                src="images/electrical1.jpg"
-                class="project-slider"
-                data-images='[
-                "images/electrical1.jpg",
-                "images/electrical2.jpg",
-                "images/electrical3.jpg",
-                "images/electrical4.jpg",
-                "images/electrical5.jpg"
-                ]'
-                alt="Electrical Installation">
+        <button class="tab" data-service="cabling">
+            Cabling
+        </button>
 
-            <div class="overlay">
-                <h3>Electrical Installation</h3>
-            </div>
+        <button class="tab" data-service="security">
+            CCTV & Security
+        </button>
 
-        </div>
+        <button class="tab" data-service="fence">
+            Electric Fence
+        </button>
 
-        <div class="project">
+        <button class="tab" data-service="wireless">
+            Wireless
+        </button>
 
-            <img
-                src="images/cabling1.jpg"
-                class="project-slider"
-                data-images='[
-                "images/cabling1.jpg",
-                "images/cabling2.jpg",
-                "images/cabling3.jpg",
-                "images/cabling4.jpg",
-                "images/cabling5.jpg"
-                ]'
-                alt="Structured Cabling">
+    </div>
 
-            <div class="overlay">
-                <h3>Structured Cabling</h3>
-            </div>
+    <div class="gallery-container">
 
-        </div>
-        
-        <div class="project">
+        <button class="gallery-btn" id="prevBtn">
+            ❮
+        </button>
 
-            <img
-                src="images/cctv1.jpg"
-                class="project-slider"
-                data-images='[
-                "images/cctv1.jpg",
-                "images/cctv2.jpg",
-                "images/cctv3.jpg",
-                "images/cctv4.jpg",
-                "images/cctv5.jpg"
-                ]'
-                alt="CCTV Installation">
+        <img
+            id="galleryImage"
+            src="images/electrical/1.jpg"
+            alt="Project">
 
-            <div class="overlay">
-                <h3>CCTV Installation</h3>
-            </div>
+        <button class="gallery-btn" id="nextBtn">
+            ❯
+        </button>
 
-        </div>
+    </div>
 
-        <div class="project">
-
-            <img
-                src="images/fence1.jpg"
-                class="project-slider"
-                data-images='[
-                "images/fence1.jpg",
-                "images/fence2.jpg",
-                "images/fence3.jpg",
-                "images/fence4.jpg",
-                "images/fence5.jpg"
-                ]'
-                alt="Electric Fence">
-
-            <div class="overlay">
-                <h3>Electric Fence</h3>
-            </div>
-
-        </div>
-
+    <div class="gallery-dots" id="galleryDots">
     </div>
 
 </section>
