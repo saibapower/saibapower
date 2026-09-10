@@ -176,43 +176,43 @@ link.classList.add("current");
 });
 const services = {
     electrical: [
-        "images/electrical/1.jpg",
-        "images/electrical/2.jpg",
-        "images/electrical/3.jpg",
-        "images/electrical/4.jpg",
-        "images/electrical/5.jpg"
+        "images/electrical/1.webp",
+        "images/electrical/2.webp",
+        "images/electrical/3.webp",
+        "images/electrical/4.webp",
+        "images/electrical/5.webp"
     ],
 
     cabling: [
-        "images/cabling/1.jpg",
-        "images/cabling/2.jpg",
-        "images/cabling/3.jpg",
-        "images/cabling/4.jpg",
-        "images/cabling/5.jpg"
+        "images/cabling/1.webp",
+        "images/cabling/2.webp",
+        "images/cabling/3.webp",
+        "images/cabling/4.webp",
+        "images/cabling/5.webp"
     ],
 
     security: [
-        "images/security/1.jpg",
-        "images/security/2.jpg",
-        "images/security/3.jpg",
-        "images/security/4.jpg",
-        "images/security/5.jpg"
+        "images/security/1.webp",
+        "images/security/2.webp",
+        "images/security/3.webp",
+        "images/security/4.webp",
+        "images/security/5.webp"
     ],
 
     fence: [
-        "images/fence/1.jpg",
-        "images/fence/2.jpg",
-        "images/fence/3.jpg",
-        "images/fence/4.jpg",
-        "images/fence/5.jpg"
+        "images/fence/1.webp",
+        "images/fence/2.webp",
+        "images/fence/3.webp",
+        "images/fence/4.webp",
+        "images/fence/5.webp"
     ],
 
     wireless: [
-        "images/wireless/1.jpg",
-        "images/wireless/2.jpg",
-        "images/wireless/3.jpg",
-        "images/wireless/4.jpg",
-        "images/wireless/5.jpg"
+        "images/wireless/1.webp",
+        "images/wireless/2.webp",
+        "images/wireless/3.webp",
+        "images/wireless/4.webp",
+        "images/wireless/5.webp"
     ]
 };
 
