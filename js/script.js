@@ -144,3 +144,33 @@ sliders.forEach(slider => {
     }, 3000);
 
 });
+const sections = document.querySelectorAll("section[id]");
+const links = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", ()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const top = section.offsetTop-120;
+
+if(scrollY>=top){
+current=section.id;
+}
+
+});
+
+links.forEach(link=>{
+
+link.classList.remove("current");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("current");
+
+}
+
+});
+
+});
