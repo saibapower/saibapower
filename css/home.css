@@ -1,20 +1,33 @@
+/* ---------- HERO ---------- */
+
 .hero{
+
     min-height:100vh;
+
     display:flex;
+
     align-items:center;
-    padding:90px 5% 60px;
+
+    padding:90px 8%;
+
     background:
-        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.72)),
-        url("../images/hero.webp");
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.7)),
+    url("../images/hero.webp");
+
     background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
+
+    background-position:center;
+
 }
 
 .hero-content{
-    width:100%;
-    max-width:680px;
+
+    max-width:650px;
+
+    color:white;
+
 }
+
 .hero h1{
 
     font-size:clamp(2.7rem,5vw,4.8rem);
@@ -24,98 +37,7 @@
     letter-spacing:-2px;
 
     margin:20px 0;
-}
 
-@media (max-width:768px){
-
-    .hero{
-        background-position:68% center;
-        padding-top:110px;
-    }
-
-    .hero h1{
-        font-size:clamp(2.6rem,5vw,4.8rem);
-        font-weight:800;
-        line-height:1.02;
-        letter-spacing:-2px;
-    }
-
-    .subtitle{
-        font-size:0.95rem;
-    }
-
-    .logo{
-        height:40px;
-    }
-}
-
-.hero-content{
-    max-width:650px;
-    width:100%;
-    color:white;
-}
-
-.tag{
-    color:#f5c400;
-    font-weight:700;
-    letter-spacing:2px;
-    margin-bottom:18px;
-}
-
-.hero h1{
-    font-size:clamp(2.5rem, 5vw, 4.5rem);
-    line-height:1.05;
-    font-weight:800;
-    letter-spacing:-1px;
-}
-
-.subtitle{
-    font-size:1.05rem;
-    color:#ddd;
-    line-height:1.8;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-}
-
-.btn{
-    padding:14px 28px;
-    border-radius:6px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.primary{
-    background:#006BAD;
-    color:white;
-}
-
-.primary:hover{
-    background:#086ea6;
-}
-
-.secondary{
-    border:2px solid #f5c400;
-    color:#f5c400;
-}
-
-.secondary:hover{
-    background:#f5c400;
-    color:black;
-}
-.contact-info{
-    margin-top:30px;
-    color:#ddd;
-    line-height:1.8;
-    font-size:0.95rem;
-}
-
-.contact-info strong{
-    color:#f5c400;
 }
 
 /* ---------- SERVICES ---------- */
