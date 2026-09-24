@@ -1,0 +1,152 @@
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:90px 5% 60px;
+    background:
+        linear-gradient(rgba(0,0,0,.68), rgba(0,0,0,.72)),
+        url("../images/hero.webp");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.hero-content{
+    width:100%;
+    max-width:680px;
+}
+
+/* SERVICES */
+
+.services{
+    padding:var(--section-spacing) 8%;
+    background:#f8f9fb;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title p{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.section-title h2{
+    font-size:clamp(2rem,4vw,3.2rem);
+    font-weight:700;
+    color:var(--dark);
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:35px 25px;
+    border-radius:15px;
+    transition:.35s;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    width:64px;
+    height:64px;
+    background:#F4B400;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.icon svg{
+    width:30px;
+    height:30px;
+    color:#111;
+}
+
+.card h3{
+    margin-bottom:12px;
+}
+
+.card p{
+    color:var(--text);
+    line-height:1.8;
+    font-size:1rem;
+}
+
+.fence-card{
+    margin-top:30px;
+    background:#111;
+    color:white;
+    border-radius:15px;
+    padding:35px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.fence-card p{
+    color:var(--text);
+    line-height:1.8;
+    font-size:1rem;
+}
+.about{
+    padding:var(--section-spacing) 8%;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.section-tag{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.about h2{
+    font-size:2.5rem;
+    margin-bottom:20px;
+}
+
+.about p{
+    color:var(--text);
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+.features{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    font-weight:600;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+/* Better spacing for service cards */
+.card{
+    min-height: 240px;
+}
+
+.icon{
+    font-size: 2.3rem;
+}
