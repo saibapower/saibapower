@@ -309,3 +309,4 @@ document
 });
 
 loadGallery();
+lucide.createIcons();
