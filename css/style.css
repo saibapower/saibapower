@@ -7,6 +7,9 @@
 
     --section:110px;
     --radius:18px;
+    --navbar-background:#080808;
+    --navbar-scrolled-background:#0C74AD;
+    --section-spacing:120px;
 }
 *{
     margin:0;
@@ -26,23 +29,6 @@ body{
     background:#fff;
     color:#222;
     line-height:1.7;
-}
-
-:root{
-    --navbar-background:#080808;
-    --navbar-scrolled-background:#0C74AD;
-    --section-spacing:120px;
-}
-
-.navbar{
-    position:fixed;
-    width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:var(--navbar-background);
-    backdrop-filter:blur(10px);
 }
 
 .logo{
@@ -158,8 +144,16 @@ body{
     max-width:700px;
 }
 
+.contact h1,
 .contact h2{
     font-size:2.5rem;
+    margin:15px 0 20px;
+}
+
+.about h1{
+    color:var(--dark);
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.2;
     margin:15px 0 20px;
 }
 
@@ -301,44 +295,23 @@ footer{
     color:#F4B400;
 }
 
-.menu-btn{
-    display:none;
-    color:white;
-    font-size:30px;
-    cursor:pointer;
-}
-/* ---------- NAVBAR ---------- */
-
-.navbar{
-    position:fixed;
-    top:0;
-    width:100%;
-    padding:18px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-    transition:.35s ease;
-    background:rgba(10,10,10,.25);
-    backdrop-filter:blur(8px);
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.navbar.scrolled{
-    background:var(--navbar-scrolled-background);
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
+.section-title p{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
 }
 
-.navbar.scrolled .nav-links a{
-    color:white;
-}
-
-.nav-links a{
-    color:white;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:#F4B400;
+.section-title h1,
+.section-title h2{
+    color:var(--dark);
+    font-size:clamp(2rem,4vw,3.2rem);
+    font-weight:700;
+    line-height:1.2;
 }
 
 .menu-btn{
@@ -482,8 +455,35 @@ resize:none;
     }
 
     .btn{
-        width:100%;
-        text-align:center;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s ease;
+    }
+
+    .btn.primary{
+        background:var(--primary);
+        color:#fff;
+    }
+
+    .btn.secondary{
+        border:2px solid var(--accent);
+        color:var(--accent);
+        background:transparent;
+    }
+
+    .btn.accent{
+        background:var(--accent);
+        color:var(--dark);
+    }
+
+    .btn:hover{
+        transform:translateY(-3px);
+        box-shadow:0 10px 25px rgba(0,0,0,.15);
     }
 
     .contact-info{
