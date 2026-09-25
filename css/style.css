@@ -261,6 +261,40 @@ footer{
     font-size:.9rem;
 
 }
+/* ---------- BUTTONS ---------- */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:14px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s ease;
+    cursor:pointer;
+}
+
+.btn.primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn.secondary{
+    border:2px solid var(--accent);
+    color:var(--accent);
+    background:transparent;
+}
+
+.btn.accent{
+    background:var(--accent);
+    color:var(--dark);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
 /* ---------- NAVBAR ---------- */
 
 .navbar{
@@ -416,11 +450,11 @@ resize:none;
     }
 
     .navbar{
-        padding:14px 5%;
+        padding:14px 8%;
     }
 
     .logo{
-        height:42px;
+        height:52px;
     }
 
     .hero{
@@ -454,38 +488,7 @@ resize:none;
         gap:14px;
     }
 
-    .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 28px;
-    border-radius:10px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s ease;
-    }
-
-    .btn.primary{
-        background:var(--primary);
-        color:#fff;
-    }
-
-    .btn.secondary{
-        border:2px solid var(--accent);
-        color:var(--accent);
-        background:transparent;
-    }
-
-    .btn.accent{
-        background:var(--accent);
-        color:var(--dark);
-    }
-
-    .btn:hover{
-        transform:translateY(-3px);
-        box-shadow:0 10px 25px rgba(0,0,0,.15);
-    }
-
+ 
     .contact-info{
         font-size:.9rem;
     }
